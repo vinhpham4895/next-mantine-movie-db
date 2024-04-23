@@ -1,12 +1,12 @@
 "use client";
 
-import { AppShell, Group, Button, NavLink } from "@mantine/core";
+import { AppShell, Group, Button, Center } from "@mantine/core";
 import Link from "next/link";
 
 export default function RootAppShell({ children }: { children: any }) {
   return (
     <AppShell
-      header={{ height: 60 }}
+      // header={{ height: 60 }}
       styles={{
         header: {
           backgroundColor: "yellowgreen",
@@ -15,7 +15,14 @@ export default function RootAppShell({ children }: { children: any }) {
       }}
     >
       <AppShell.Header>
-        <Group justify="space-between" m="xs">
+        <Group
+          justify="space-between"
+          top={0}
+          bottom={0}
+          mx="xs"
+          my="auto"
+          h={60}
+        >
           <Button
             component={Link}
             href="/"
