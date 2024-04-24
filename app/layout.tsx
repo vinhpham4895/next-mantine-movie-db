@@ -2,7 +2,8 @@ import "@mantine/core/styles.css";
 import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "../theme";
-import RootAppShell from "../components/layout/appshell";
+import Header from "../components/layout/header";
+import Footer from "../components/layout/footer";
 
 export const metadata = {
   title: "Movie Database",
@@ -22,7 +23,9 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme}>
-          <RootAppShell>{children}</RootAppShell>
+          <Header />
+          {children}
+          <Footer />
         </MantineProvider>
       </body>
     </html>
