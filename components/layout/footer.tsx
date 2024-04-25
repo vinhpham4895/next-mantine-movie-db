@@ -3,5 +3,9 @@
 import { Box } from "@mantine/core";
 
 export default function Footer() {
-  return <Box>Footer Content</Box>;
+  return (
+    <Box bg="#000000" style={{ color: "white" }}>
+      Footer Content
+    </Box>
+  );
 }
