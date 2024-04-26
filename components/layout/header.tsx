@@ -4,6 +4,7 @@ import { Box, Group, Button, Select, Drawer, CloseButton } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMenu2, IconSearch } from "@tabler/icons-react";
 import AppDrawer from "./drawer";
+import Link from "next/link";
 
 export default function Header() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -13,7 +14,7 @@ export default function Header() {
       <AppDrawer opened={opened} closeCallback={close} />
       <Box h="48px" px="12px" bg="#121212">
         <Group h="32px">
-          <Button color="yellow.5" c="black" h="100%">
+          <Button component={Link} href="/" color="yellow.5" c="black" h="100%">
             IMDb
           </Button>
           <Button
